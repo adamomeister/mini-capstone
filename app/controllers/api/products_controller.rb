@@ -5,7 +5,9 @@ class Api::ProductsController < ApplicationController
     render "show.json.jbuilder"
   end
   def index
-    @products = Product.all
+    search_term = params[:user_search_input]
+    @products = Product.where('name LIKE ?', "%#{search_term}%")
+    @products.order!(:id => :DESC)
     render "index.json.jbuilder"
   end
   def create
