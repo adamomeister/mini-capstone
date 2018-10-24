@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     post '/products' => 'products#create'
     #update
     #delete
+    post '/users' => 'users#create'
   end
 end
