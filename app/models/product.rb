@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_many :images
+
   def is_discounted
     price < 10
   end
