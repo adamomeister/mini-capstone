@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     #update
     #delete
     post '/users' => 'users#create'
+    post '/sessions' => 'sessions#create'
+    get '/orders' => 'orders#index'
+    post '/orders' => 'orders#create'
   end
 end
