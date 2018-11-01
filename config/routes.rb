@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     post '/sessions' => 'sessions#create'
     get '/orders' => 'orders#index'
     post '/orders' => 'orders#create'
+    post '/cart' => 'carted_products#create'
+    get '/cart' => 'carted_products#index'
   end
 end
