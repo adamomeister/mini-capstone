@@ -13,7 +13,7 @@ class Api::CartedProductsController < ApplicationController
   end
 
   def index
-    @carted_product = CartedProduct.where("status = 'carted'")
+    @carted_product = CartedProduct.where(status: 'carted', user_id: current_user.id)
     render "index.json.jbuilder"
   end
 end
